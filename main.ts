@@ -1,12 +1,12 @@
-radio.onReceivedString(function (receivedString) {
-    if (receivedString == 1) {
-        wuKong.mecanumSpeed(wuKong.WheelList.LeftFront_def, 100)
-    } else if (receivedString == 2) {
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
         wuKong.mecanumSpeed(wuKong.WheelList.RightFront_def, 100)
-    } else if (receivedString == 3) {
+    } else if (receivedNumber == 2) {
+        wuKong.mecanumSpeed(wuKong.WheelList.LeftFront_def, 100)
+    } else if (receivedNumber == 3) {
         wuKong.mecanumSpeed(wuKong.WheelList.LeftFront_def, 100)
         wuKong.mecanumSpeed(wuKong.WheelList.RightFront_def, 100)
-    } else if (receivedString == 0) {
+    } else if (receivedNumber == 0) {
         wuKong.mecanumStop()
     }
 })
